@@ -10,6 +10,12 @@ class DigitalClicker extends React.Component {
     }
   }
 
+  updateClicker = () => {
+    this.setState({
+      timesClicked: this.state.timesClicked += 1
+    });
+  }
+
   render() {
     return {
       <button onClick={this.updateClicker}>{this.state.timesClicked}</button>
